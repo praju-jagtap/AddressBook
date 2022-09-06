@@ -24,6 +24,7 @@ namespace AddressBook
                 Console.WriteLine("------------------------------------\n");
             }
         }
+        
         public void EditContact(string name)
         {
             foreach (var contact in contacts)
@@ -69,6 +70,18 @@ namespace AddressBook
                     Display();
                 }
             }
+        }
+        public void DeleteContact(string name)
+        {
+            Contact delete = new Contact();
+            foreach (var contact in contacts)
+            {
+                if (contact.FirstName == name)
+                {
+                    delete = contact;
+                }
+            }
+            contacts.Remove(delete);
         }
     }
 }
