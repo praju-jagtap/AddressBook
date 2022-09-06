@@ -5,15 +5,15 @@
         public static void Main(string[] args)
         {
             bool flag = true;
+            Addressbook addressbook = new Addressbook();
             while (flag)
             {
-                Console.WriteLine("1.Add\n");
+                Console.WriteLine("1.Add\n2.Edit\n");
                 Console.WriteLine("Please Enter Your Choice : ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
-                        Addressbook addressbook = new Addressbook();
                         Contact contact = new Contact();
                         {
                             Console.WriteLine("----------------------------\n");
@@ -36,6 +36,11 @@
                         }
                         Console.WriteLine("------- Display Added Contact -------");
                         addressbook.AddContact(contact);
+                        break;
+
+                    case 2:
+                        string FirstName = Console.ReadLine();
+                        addressbook.EditContact(FirstName);
                         break;
                     
                     default:
