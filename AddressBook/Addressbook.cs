@@ -65,6 +65,10 @@ namespace AddressBook
                             Console.WriteLine("Enter Email to Edit");
                             contact.Email = Console.ReadLine();
                             break;
+
+                        default:
+                            Console.WriteLine("Enter the Valid Option");
+                            break;
                     }
                     Console.WriteLine("------- Edited Contact List --------");
                     Display();

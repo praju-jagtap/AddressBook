@@ -1,4 +1,6 @@
-﻿namespace AddressBook
+﻿using System.Runtime.CompilerServices;
+
+namespace AddressBook
 {
     internal class Program
     {
@@ -8,7 +10,7 @@
             Addressbook addressbook = new Addressbook();
             while (flag)
             {
-                Console.WriteLine("1.Add\n2.Edit\n3.Delete\n");
+                Console.WriteLine("1.Add Multiple Contact\n2.Edit\n3.Delete\n4.Add Multiple Person");
                 Console.WriteLine("Please Enter Your Choice : ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -52,7 +54,7 @@
                         addressbook.DeleteContact(firstName);
                         addressbook.Display();
                         break;
-
+                
                     default:
                         Console.WriteLine("Invalid Choice");
                         break;
